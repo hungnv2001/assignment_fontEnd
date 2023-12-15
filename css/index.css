@@ -1,0 +1,100 @@
+.logo{
+    width: 40%;
+}
+.slide_show a{
+    color: rgb(67, 125, 145);
+    text-decoration: none;
+}
+.slide_show a:hover{   
+    text-decoration: underline;
+}
+body{
+    font: 1.5em sans-serif;
+
+    background-image: url("/./imgs/bg-all.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.uu_dai_month{
+    /* background-color: blue; */
+    border:3px solid blue ; 
+    border-radius: 55%;
+    width: 200px;
+    height: 200px;
+}
+.uu_dai_month> img{
+    width: 180px;
+    height: 180px;
+}
+.card-body{
+    opacity: 0.5;
+}
+.khamPha .chuyen{
+    height: 450px;
+    width: 100%;
+    
+}
+.khamPha>.row  button{
+    border: none!important;
+    border-radius: 3px;
+}
+.haNoi{
+    background-image: url("/imgs/diaDiem/62fa63bb2d31e_Ha_Noi.webp");  
+}
+.hoChiMinh{
+    background-image: url("/imgs/diaDiem/Ho-Chi-Minh-City-SGN.jpg");  
+    background-position: center;
+}
+.daNang{
+    background-image: url("/imgs/diaDiem/Da_Nang.jpg");  
+}
+.haiPhong{
+    background-image: url("/imgs/diaDiem/Hai_Phong.jpg");  
+}
+.hue{
+    background-image: url("/imgs/diaDiem/Hue.jpg");  
+}
+
+
+.khamPha .title-flight{
+    /* background-color: aqua!important; */
+    background-color: rgb(5 140 179 / 64%);
+}
+.non_opacity{
+    opacity: 1!important;
+}
+.khamPha .xem-them button{
+    color: rgb(219, 165, 16);
+    border: 1px solid rgb(219, 165, 16);
+    padding: 20px 30px ;
+    border-radius: 5px;
+}
+ .xem-them button:hover{
+    color: white;
+    background-color:rgb(219, 165, 16) ;
+    
+}
+.star-4{
+    height: 150px;
+    background-image: url('/imgs/bg_menu_header_bottom.svg')!important;
+}
+.ft_end{
+    background-color: rgb(22, 105, 135);
+}
+.ft_end a{
+    text-decoration: none;
+    color: aliceblue;
+   
+}
+.ft_end a:hover{
+    text-decoration: underline;
+    color:rgb(219, 165, 16);
+   
+}
+.lien_he{
+    font-size: 15px;
+    line-height: 23px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="libs/angular.min.js"></script>
+  <script src="libs/angular-route.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body ng-app="myApp">
+  <nav class="navbar navbar-expand-lg  bg-light">
+    <div class="container">
+      <a class="" href="#">
+      </a>
+      <img src="imgs/logo.webp" class="logo me-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+        <ul class="navbar-nav  d-flex  flex-row-reverse  ">
+          <li class="nav-item">
+            <a class="nav-link active me-2 " aria-current="page" href="#!/lien_he">Liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-2" aria-current="page" href="#!/dat_ve">Đặt vé</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active  me-2" aria-current="page" href="#!/trang_chu">Trang chủ</a>
+          </li>
+
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid mt-0 " >
+   
+    <div ng-view></div>
+  </main>
+  <footer class="container-fluid mt-5 mb">
+    <div class="star-4">
+      <div class="container">
+        <img class="float-start" src="imgs/4-Star.webp" alt="">
+        <div class="float-start mt-5">
+          <span class="text-info fw-bold">Vietnam Airlines tự hào là Hãng hàng không quốc tế 4 sao</span>
+          <br>
+          <span> Xin trân trọng cảm ơn sự đồng hành của Quý khách và bạn hàng!</span>
+        </div>
+      </div>
+    </div>
+    <div class="ft_end   ">
+      <div class="container pt-3">
+        <div class="row  ">
+          <div class="col-xl-3 col-md-6">
+            <h4 class="fw-bold text-warning">VietNam Airlines</h4>
+            <div class=" text-start fs-6">
+              <a href="">Giới thiệu công ty</a>
+              <br><a href=""> Đội Bay</a>
+              <br><a href=""> Đối Tác</a>
+              <br><a href=""> Thông Tin Truyền Thông </a>
+              <br><a href="">Trách Nhiệm Xã Hội </a>
+              <br><a href=""> Quan Hệ Cổ Đông </a>
+              <br><a href=""> Thông Tin Đấu Thầu </a>
+              <br><a href="">Việc Làm Với Vietnam Airlines</a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <h4 class="fw-bold text-warning">Pháp lý</h4>
+            <div class=" text-start fs-6">
+              <a href="">Các Điều kiện & Điều Khoản</a>
+              <br><a href=""> Điều Lệ Vận Chuyển</a>
+              <br><a href="">Điều Kiện Sử Dụng Cookies</a>
+              <br><a href=""> Bảo Mật Thông Tin</a>
+              <br><a href="">Quy Chế Hoạt Động Sàn TMĐT </a>       
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <h4 class="fw-bold text-warning ">Hỗ trợ</h4>
+            <div class=" text-start fs-6">
+              <a href="">Góp ý dịch vụ</a>
+              <br><a href=""> Trung tâm Trợ giúp</a>
+              <br><a href=""> Liên hệ với chi nhánh của VNA</a>
+              <br><a href=""> Chính Sách Bảo Vệ Hành Khách</a>
+              <br><a href="">Trợ lý ảo của Vietnam Airlines</a>
+              <br><a href=""> Ứng Dụng Di Động</a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <h4 class="fw-bold text-warning">Thông Tin Hữu Ích</h4>
+            <div class=" text-start fs-6">
+              <a href="">Trang Web hàng hoá</a>
+              <br><a href="">Cẩm Nang Mua Vé Online</a>
+              <br><a href="">Quảng Cáo với VietNam Airlines</a>
+            </div>
+          </div>
+        </div>
+        <div class="pe-5 container" >
+          <img src="/imgs/Screenshot 2023-09-26 231807.png" class="me-5 w-100" alt="">
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+<script src="controller/DatVeController.js"></script>
+<script src="controller/TrangChuController.js"></script>
+<script src="controller/LienHeController.js"></script>
+<script src="controller/UpdateVeController.js"></script>
+
+<script src="js/index.js">
+
+</script>
+
+</html>

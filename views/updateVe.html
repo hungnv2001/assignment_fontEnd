@@ -1,0 +1,205 @@
+<div>
+    <form ng-submit="updateVe()">
+        <div class="row">
+            <div class=" col-xl-7 card  container text-center  mt-5 ">
+                <div class="card-header">
+                    <h1>Chỉnh sửa vé đã đặt</h1>
+                </div>
+                <div class="fs-5 text-start pt-3 pb-3">
+                    <div class="row  ">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Điểm xuất phát</label>
+                                <select class="form-select" ng-model="start"
+                                    ng-options="city.adress for city in address ">
+                                    <option value="">Chọn điểm xuất phát</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Điểm đến</label>
+                                <select class="form-select" ng-model="start"
+                                    ng-options="city.adress for city in address ">
+                                    <option value="">Chọn điểm đến</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Ngày đi</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Ngày về</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row  ">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Hạng chuyến bay</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="2">Thương gia</option>
+                                    <option value="1" selected>Phổ thông</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Khối lượng hành lý</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1" selected>&lt;20kg</option>
+                                    <option value="2">&lt;23kg</option>
+                                    <option value="2">&lt;30kg</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Loại chuyến bay</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Một chiều</option>
+                                    <option value="1">Khứ hồi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Chọn chuyến bay</label>
+                                <select class="form-select" ng-model="chuyenBay" aria-label="Default select example">
+                                    <option selected>NGF200</option>
+                                    <option>NGF201</option>
+                                    <option>NGF202</option>
+                                    <option>NGF203</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Giờ cất cánh</label>
+                                <input type="time" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Tổng tiền</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder=""
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="basic-addon2">VND</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Hình thức thanh toán</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Thẻ</option>
+                                    <option value="1">Tiền mặt</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Trạng thái thanh toán</label>
+                                <input type="text" readonly class="form-control text-secondary" value="Chưa thanh toán">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted fs-6 bg-warning-subtle">
+                    <i class="bi bi-exclamation-circle"></i> THÔNG TIN QUAN TRỌNG:
+                    Quý khách đang sử dụng website tại thị trường Việt Nam và đồng tiền thanh toán là Đồng Việt Nam
+                    (VNĐ).
+                    Theo quy định của Bộ Tài chính thì chỉ các giao dịch thanh toán bằng Đồng Việt Nam (VNĐ) mới được
+                    xuất
+                    hóa
+                    đơn GTGT điện tử.
+                    Nếu cần thanh toán bằng đồng tiền khác, Quý khách vui lòng đổi Quốc gia/Vùng (tại đây).
+                </div>
+            </div>
+            <div class=" col-xl-4 card  container  mt-5  p-5 bg-info-subtle">
+                <div class="card-header">
+                    <h1>Thông tin khách hàng</h1>
+                </div>
+                <div class="fs-5 text-start pt-3 pb-3">
+                    <div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" ng-model="thongTin.fullName">
+                            <p ng-if="checkNull.fullName" class="text-danger ">**Họ tên không được để trống</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Số căn cước</label>
+                            <input type="text" class="form-control" ng-model="thongTin.CCCD">
+                            <p ng-if="checkNull.CCCD" class="text-danger ">**Số căn cước không được để trống    </p>
+                            <p ng-if="check.CCCD" class="text-danger ">**Số căn cước không hợp lệ</p>
+                        </div>
+                    </div>
+                    <div class="mt-3 mb-3">
+                        <label for="" class="form-label">Giới tính : <br></label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox"  ng-model="gtinh_nam" >
+                            <label class="form-check-label" >Nam</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox"  ng-model="gtinh_nu" >
+                            <label class="form-check-label" >Nữ</label>
+                        </div>
+                        <p ng-if="checkNull.gender" class="text-danger ">**Giới tính không được bỏ trống</p>
+                        <p ng-if="check.gender" class="text-danger ">**Giới tính không hợp lệ</p>
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Số điện thoại</label>
+                            <input type="text" class="form-control"ng-model="thongTin.phoneNum">
+                            <p ng-if="checkNull.phoneNum" class="text-danger ">**Số điện thoại không được để trống</p>
+                            <p ng-if="check.phoneNum" class="text-danger ">**Số điện thoại không hợp lệ</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email</label>
+                            <input type="text" class="form-control" ng-model="thongTin.email">
+                            <p ng-if="check.email" class="text-danger ">**Email không hợp lệ</p>
+                            <p ng-if="checkNull.email" class="text-danger ">**Email không được để trống</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Mã vé</label>
+                            <input type="text" readonly class="form-control text-secondary" id=""
+                                ng-model="chuyenBay">
+                                <p ng-if="checkNull.veID" class="text-danger ">**Bạn chưa chọn chuyến bay nào</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer  text-end ">
+
+                    <a href="#!/dat_ve" class="text-decoration-none">
+                        <button class=" btn btn-outline-danger p-2 mt-3">Huỷ
+                        </button>
+                    </a>
+                    <button class=" btn btn-success p-2 mt-3">Thay đổi</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
